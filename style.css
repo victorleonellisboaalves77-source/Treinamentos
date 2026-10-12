@@ -1,0 +1,221 @@
+
+/* ==============================
+   1. VARIÁVEIS E RESET
+============================== */
+
+:root {
+    --roxo: #1a0d3a;
+    --roxo2: #2a1250;
+    --ouro: #d4af37;
+    --creme: #f6efd8;
+    --vinho: #7a1f3d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==============================
+   2. ESTILOS GERAIS
+============================== */
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--roxo);
+    color: var(--creme);
+    min-height: 100vh;
+}
+
+h1,
+h2,
+.btn {
+    font-family: "Cinzel", "Trajan Pro", Georgia, serif;
+}
+
+
+/* ==============================
+   3. LAYOUT PRINCIPAL
+============================== */
+
+.pagina {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   4. ÁREA PROMOCIONAL
+============================== */
+
+.promo {
+    position: relative;
+    background: #0b0620;
+}
+
+.promo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ==============================
+   5. MENU PRINCIPAL
+============================== */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+    padding: 2.5rem 2rem;
+
+    text-align: center;
+
+    background: radial-gradient(
+        circle at 50% 0,
+        var(--roxo2),
+        var(--roxo)
+    );
+}
+
+.menu img {
+    width: 110px;
+    height: auto;
+}
+
+.menu h1 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    color: var(--ouro);
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+}
+
+.lema {
+    font-style: italic;
+    opacity: 0.85;
+}
+
+
+/* ==============================
+   6. NAVEGAÇÃO
+============================== */
+
+nav {
+    width: 100%;
+    max-width: 380px;
+}
+
+nav ul {
+    display: grid;
+    gap: 1rem;
+
+    margin-top: 0.5rem;
+
+    list-style: none;
+}
+
+
+/* ==============================
+   7. BOTÕES DO MENU
+============================== */
+
+.btn {
+    display: block;
+    padding: 1rem 1.25rem;
+
+    border: 2px solid var(--ouro);
+    border-radius: 6px;
+
+    background: rgba(122, 31, 61, 0.55);
+    color: var(--creme);
+
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+
+    transition: 0.25s;
+}
+
+.btn small {
+    display: block;
+    margin-top: 0.2rem;
+
+    font-family: Georgia, serif;
+    font-size: 0.8rem;
+    letter-spacing: 0;
+
+    opacity: 0.8;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: var(--ouro);
+    color: var(--roxo);
+
+    transform: translateY(-2px);
+    outline: none;
+}
+
+
+/* ==============================
+   8. RODAPÉ
+============================== */
+
+footer {
+    margin-top: 1rem;
+
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+
+/* ==============================
+   9. PÁGINAS INTERNAS
+============================== */
+
+.interna {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+
+    text-align: center;
+}
+
+.interna h2 {
+    margin: 1rem 0;
+    color: var(--ouro);
+}
+
+.interna p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   10. RESPONSIVIDADE
+============================== */
+
+@media (max-width: 800px) {
+    .pagina {
+        grid-template-columns: 1fr;
+    }
+
+    .promo {
+        height: 40vh;
+        min-height: 240px;
+    }
+
+    .menu {
+        padding: 2rem 1.25rem;
+    }
+}
+
